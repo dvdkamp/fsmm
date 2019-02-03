@@ -16,7 +16,7 @@ run.fsmm = function(fsmm.model.input  = read.csv("data/fsmm.example.forcing.vars
   ######################################################################
   ## Load in fortran code
   
-  system('R CMD SHLIB fsmm.f')
+  system('R CMD SHLIB -o fsmm.so code/fsmm.f ')
   dyn.load('fsmm.so')
   
   
