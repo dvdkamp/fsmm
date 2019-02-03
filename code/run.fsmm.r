@@ -108,7 +108,7 @@ run.fsmm = function(fsmm.model.input  = read.csv("data/fsmm.example.forcing.vars
     parms = fsmm.model.pars.full,
     verbose = FALSE,
     ynames = TRUE,
-    dllname = 'fmcdv',
+    dllname = 'fsmm',
     initfunc = 'fmcpar',
     nout = 2,
     outnames = c("fuel.mois.mod", "fuel.temp.mod"),
