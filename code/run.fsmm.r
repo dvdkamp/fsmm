@@ -1,7 +1,7 @@
 require(deSolve)
 
-run.fsmm = function(fsmm.model.input  = read.csv("fsmm.example.input.csv"),
-                    fsmm.model.pars,
+run.fsmm = function(fsmm.model.input  = read.csv("data/fsmm.example.forcing.vars.csv"),
+                    fsmm.model.pars = c(4.98,-18.80,3.01e-10,0.768,0.22),
                     ## vector of model Pars, Order: A,B,K_s,M_MAX,DR_O
                     RHO_S = 400,
                     # kg m-3 : Stick density  (taken from Nelson, 2000))
