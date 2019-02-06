@@ -27,15 +27,19 @@ This core of the model is written in Fortran and called by R using the `deSolve`
 
 As such you will be required to have Fortran installed. 
 
+## Shortwave partitioning and downwelling longwave radiation not yet implemented. 
+
+I have yet to implement these two features for this version of the model. The model will be updated soon with these additional features. See section A.2 of van der kamp *et al* (2017) for details on these two features. 
+
 ## Running the model
 
-the function `run.fsmm` will run the model. 
+Running `run.fsmm()` will run the model with default arguments and produce modelled fuel moisture and temperature. 
 
-#### Required arguments
+#### Required arguments for `run.fsmm`
 
   * `fsmm.model.input`: a data.frame containing the required forcing variables. The default is to load the example forcing data.frame: `data/fsmm.example.forcing.vars.csv`. This dataframe has to have the following column names:
-    * `Alt_s` 
-    * `Azi_s`
+    * `Alt_s`: Sun Altitude (rad)
+    * `Azi_s`: Sun Azimuth. (0 rad at noon, Westerly directions: 0-pi rad Easterly directions: pi to 2pi rad)
     * `k.down.dir`: Downwelling direct shortwave radiation (Wm<sup>-2</sup>) 
     * `k.down.diff`: Downwelling diffuse shortwave radiation (Wm<sup>-2</sup>) 
     * `temp`: Air temperature (<sup>o</sup>C)
