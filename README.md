@@ -40,6 +40,7 @@ Running `run.fsmm()` will run the model with default arguments and produce model
   * `fsmm.model.input`: a data.frame containing the required forcing variables. The default is to load the example forcing data.frame: `data/fsmm.example.forcing.vars.csv`. This dataframe has to have the following column names:
     * `Alt_s`: Sun Altitude (rad)
     * `Azi_s`: Sun Azimuth. (0 rad at noon, Westerly directions: 0-pi rad Easterly directions: pi to 2pi rad)
+      * note: For now, the user will need to calculate these sun position variables themselves. the packages `oce` and `suncalc` can help here.
     * `k.down.dir`: Downwelling direct shortwave radiation (Wm<sup>-2</sup>) 
     * `k.down.diff`: Downwelling diffuse shortwave radiation (Wm<sup>-2</sup>) 
     * `temp`: Air temperature (<sup>o</sup>C)
