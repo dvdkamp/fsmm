@@ -27,9 +27,13 @@ This core of the model is written in Fortran and called by R using the `deSolve`
 
 As such you will be required to have Fortran installed. 
 
-## Shortwave partitioning and downwelling longwave radiation not yet implemented. 
+## Shortwave partitioning, sun position, and downwelling longwave radiation not yet implemented. 
 
-I have yet to implement these two features for this version of the model. The model will be updated soon with these additional features. See section A.2 of van der kamp *et al* (2017) for details on these two features. 
+I have yet to implement these three features for this version of the model. As such, you will be required to provide Downwelling direct shortwave radiation  (`k.down.dir`), Downwelling diffuse shortwave radiation (`k.down.diff`), Sun Altitude (`Alt_s`), Sun Azimuth (`Azi_s`), and  Downwelling longwave radiation (`L_dn`) to the model yourself (see details on the `fsmm.model.input` argument in next section). 
+
+The model will be updated soon with these additional features, at which point you will only need to provide total shortwave radiation.
+
+See section A.2 of van der kamp *et al* (2017) for details on these features. 
 
 ## Running the model
 
